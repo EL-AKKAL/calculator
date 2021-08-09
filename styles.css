@@ -1,0 +1,63 @@
+*,*::after,*::before
+{
+    box-sizing: border-box;
+    font-family:  Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+}
+body
+{
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+.calculator-grid
+{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4 , 100px);
+    grid-template-rows: minmax(120px , auto) repeat(5,100px);
+
+}
+.calculator-grid >button
+{
+    cursor: pointer;
+    border: 2px white solid;
+    font-size: 3rem;
+    outline: none;
+    background-color: rgba(22, 169, 189, 0.705);
+    color: white;
+}
+.calculator-grid >button:hover
+{
+    background-color: rgba(1, 213, 241, 0.979);
+   
+}
+.output 
+{
+    grid-column: 1/-1;
+    background-color:wheat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;  /* this for making a padding between the two text inputs*/
+    flex-direction: column;    /* this for switching the alignement to vertical       */
+    padding: 10px;
+    word-wrap: break-word;
+    word-break:break-all; /*this for breaking the line*/
+}
+.span-two
+{
+    grid-column: span 2;
+}
+
+.output .top-text
+{
+    color: rgba(48, 51, 51, 0.705);
+    font-size: 1.5rem;
+}
+.output .bottom-text
+{
+    color: black;
+    font-size: 2.5rem;
+}
